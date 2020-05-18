@@ -12,6 +12,9 @@
   <component name="ChangeListManager">
     <list default="true" id="92937285-0633-4551-82e4-d5c067eb738e" name="Default Changelist" comment="kek">
       <changelist_data name="fogonfrog" email="" />
+      <change beforePath="$PROJECT_DIR$/.idea/methodsOfOptimisation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/methodsOfOptimisation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/__main__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/__init__.py" afterDir="false" />
@@ -190,6 +193,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="kek" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1589825723031">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589825723031" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1589825723031">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589825723031" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1589825723031">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589825723031" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1589825723031">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589825723031" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1589824110674">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
