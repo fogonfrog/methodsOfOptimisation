@@ -1,64 +1,66 @@
-def fib(n):
+def func(x):
+    return x * x + 4 * x + 6
+
+def fibbon(n):
     if n <= 1:
         return 1
-    return fib(n-1)+ fib(n-2)
+    return fibbon(n-1) + fibbon(n-2)
 
-def f(x):
-    return x * x - 4 * x +6
-
-a = float(input('vvedite a: '))
-b = float(input('vvedite b: '))
+a = int(input("Введите a = "))
+b = int(input("Введите b = "))
 
 eps = 0.5
-gam = 0.2
-kol = 0
 
 x = (b - a) / eps
 n = 2
 
-while fib(n) < x:
-    n+=1
+while fibbon(n) < x:
+    n += 1
 
-print("N = ",n)
-c = a + (b - a)*(fib(n) / fib(n + 2))
-d = a + (b - a)*(fib(n + 1) / fib(n + 2))
-fc = f(c)
-fd = f(d)
+print("N = ", n)
+
+yk = a + (b - a) * (fibbon(n) / fibbon(n + 2))
+zk = a + (b - a) * (fibbon(n + 1) / fibbon(n + 2))
+
+fyk = func(yk)
+fzk = func(zk)
+
 i = 1
 print("Итерация = ", i)
-print("C = ", c)
-print("D = ", d)
-print("F(C) = ", fc)
-print("F(D) = ", fd)
+print("Yk = ", yk)
+print("Zk = ", zk)
+print("F(Yk) = ", fyk)
+print("F(Zk) = ", fzk)
 
 
 while abs(a - b) >= eps:
     i += 1
-    if (fc<=fd):
-        b = d
-        d = c
-        fd = fc
-        c = a + (b - a)*(fib(n + 1 - i) / fib(n + 3 - i))
-        fc = f(c)
-        print("F(C)<=F(D)")
+    if (fyk <=  fzk):
+        b = zk
+        yz = yk
+        fyz = fyk
+        yk = a + (b - a) * (fibbon(n + 1 - i) / fibbon(n + 3 - i))
+        fyk = func(yk)
+        print("F(Yk) <= F(Yz)")
         print("Итерация = ", i)
-        print("B = ",b)
-        print("C = ", c)
-        print("D = ", d)
-        print("F(C) = ", fc)
-        print("F(D) = ", fd)
+        print("B = ", b)
+        print("Yk = ", yk)
+        print("Yz = ", zk)
+        print("F(Yk) = ", fyk)
+        print("F(Yz) = ", fzk)
     else:
-        a = c
-        c = d
-        fc = fd
-        d = a + (b - a)*(fib(n + 2 - i) / fib(n + 3 - i))
-        fd = f(d)
-        print("F(C)>F(D)")
+        a = yk
+        yk = zk
+        fyk = fzk
+        yz = a + (b - a) * (fibbon(n + 2 - i) / fibbon(n + 3 - i))
+        fyz = func(zk)
+        print("F(Yk) > F(Yz)")
         print("Итерация = ", i)
-        print("A = ",a)
-        print("C = ", c)
-        print("D = ", d)
-        print("F(C) = ", fc)
-        print("F(D) = ", fd)
-print("Ответ : ",(a + b) / 2)
-print("Количество итераций = ",i)
+        print("A = ", a)
+        print("Yk = ", yk)
+        print("Yz = ", zk)
+        print("F(Yk) = ", fyk)
+        print("F(Yz) = ", fzk)
+
+print("Ответ : ", (a + b) / 2)
+print("Количество итераций = ", i)

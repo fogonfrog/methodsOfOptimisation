@@ -1,27 +1,32 @@
-def f(x):
-    return x * x - 4 * x +6
+def func(x):
+    return x * x + 4 * x + 6
 
-a = int(input('vvedite a: '))
-b = int(input('vvedite b: '))
+a = int(input("Введите a = "))
+b = int(input("Введите b = "))
 eps = 0.5
-kol = 0
+iter = 0
 
-kol = 1
-f1 = f(a)
-f2 = f(a + eps * kol)
-print("Итерация: ",kol)
-print("Fk-1 = ",f1)
-print("Fk = ",f2)
-while(f1>f2):
-    print("FK-1 > Fk")
-    f1 = f2
-    kol += 1
-    f2 = f(a + eps * kol)
-    print("Итерация: ",kol)
-    print("Fk-1 = ",f1)
-    print("Fk = ",f2)
-print("FK-1 <= Fk")
-print("Точка минимума +-0.5: ",(2 * a + eps * (kol-2) + eps * (kol-1))/2)
-print("Значение функции: ", f1)
-print("Количество итерация: ", kol)
+iter = 1
+func1 = func(a)
+xi = a + eps * iter
+func2 = func(xi)
+
+print("Итерация: ", iter)
+print("F(a) = ", func1)
+print("F(xi) = ", func2)
+
+while(func1 > func2):
+    iter += 1
+    print("F(xi-1) > F(xi)")
+    func1 = func2
+    xi = a + eps * iter
+    func2 = func(xi)
+    print("Итерация: ", iter)
+    print("F(xi-1) = ", func1)
+    print("F(xi) = ", func2)
+
+print("F(xi-1) <= F(i)")
+print("Точка минимума +-0.5: ", (2 * a + eps * (iter - 2) + eps * (iter - 1)) / 2)
+print("Значение функции: ", func1)
+print("Количество итераций: ", iter)
 

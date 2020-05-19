@@ -1,5 +1,5 @@
-def f(x):
-    return x * x - 4 * x +6
+def func(x):
+    return x * x + 4 * x + 6
 
 a = int(input('vvedite a: '))
 b = int(input('vvedite b: '))

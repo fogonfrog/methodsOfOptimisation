@@ -1,51 +1,56 @@
 import math as m
 
-def f(x):
-    return x * x - 4 * x +6
+def func(x):
+    return x * x + 4 * x + 6
 
-a = int(input('vvedite a: '))
-b = int(input('vvedite b: '))
+a = int(input("Введите a = "))
+b = int(input("Введите b = "))
 
 eps = 0.5
-gam = 0.2
-c = (3 - 5 ** (1/2))/2 * (b - a) + a
-d = (5 ** (1/2) - 1)/2 * (b - a) + a
-fc = f(c)
-fd = f(d)
-i = 1
-print("Итерация = ", i)
-print("C = ", c)
-print("D = ", d)
-print("F(C) = ", fc)
-print("F(D) = ", fd)
+l = 0.2
+k = 0
 
-while abs(a - b)>=eps:
-    i +=1
-    if fc <= fd:
-        b = d
-        d = c
-        fd = fc
-        c = (3 - m.sqrt(5))/2 * (b - a) + a
-        fc = f(c)
-        print("F(C)<=F(D)")
+y0 = a + 0.38196 * (b - a)
+z0 = a + b - y0
+
+fyk = func(y0)
+fzk = func(z0)
+i = 1
+
+print("Итерация = ", i)
+print("Y0 = ", y0)
+print("Z0 = ", z0)
+print("F(Yk) = ", fyk)
+print("F(Zk) = ", fzk)
+
+while abs(a - b) >= eps:
+    i += 1
+    if fyk <= fzk:
+        b = z0
+        z0 = y0
+        fzk = fyk
+        y0 = a + 0.38196 * (b - a)
+        fyk = func(y0)
+        print("F(Yk) <= F(Zk)")
         print("Итерация = ", i)
-        print("B = ",b)
-        print("C = ", c)
-        print("D = ", d)
-        print("F(C) = ", fc)
-        print("F(D) = ", fd)
+        print("B = ", b)
+        print("Y0 = ", y0)
+        print("Z0 = ", z0)
+        print("F(Yk) = ", fyk)
+        print("F(Zk) = ", fzk)
     else:
-        a = c
-        c = d
-        fc = fd
-        d = (m.sqrt(5) - 1)/2 * (b - a) + a
-        fd = f(d)
-        print("F(C)>F(D)")
+        a = y0
+        y0 = z0
+        fyk = fzk
+        d = 0.38196 * (b - a) + a
+        fzk = func(z0)
+        print("F(Yk) > F(Zk)")
         print("Итерация = ", i)
-        print("A = ",a)
-        print("C = ", c)
-        print("D = ", d)
-        print("F(C) = ", fc)
-        print("F(D) = ", fd)
-print("Ответ : ",(a + b) / 2)
-print("Количество итераций = ",i)
+        print("A = ", a)
+        print("Y0 = ", y0)
+        print("Z0 = ", z0)
+        print("F(Yk) = ", fyk)
+        print("F(Zk) = ", fzk)
+
+print("Ответ : ", (a + b) / 2)
+print("Количество итераций = ", i)
